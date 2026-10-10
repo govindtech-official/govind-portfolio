@@ -6,13 +6,27 @@ const profiles = {
 };
 
 const profileScreen = document.getElementById('profileScreen');
+const openingScreen = document.getElementById('openingScreen');
 const site = document.getElementById('site');
 const profileLabel = document.getElementById('profileLabel');
 const profileDialog = document.getElementById('profileDialog');
 const introDialog = document.getElementById('introDialog');
 const toast = document.getElementById('toast');
 let introTimer;
+let openingTimer;
 let toastTimer;
+
+function finishOpening() {
+  clearTimeout(openingTimer);
+  if (!openingScreen || openingScreen.hidden) return;
+  openingScreen.classList.add('is-leaving');
+  window.setTimeout(() => { openingScreen.hidden = true; }, 700);
+}
+
+document.getElementById('skipOpening').addEventListener('click', finishOpening);
+document.addEventListener('keydown', (event) => {
+  if (!openingScreen.hidden && (event.key === 'Enter' || event.key === 'Escape')) finishOpening();
+});
 
 function rememberProfile(profile) {
   try { sessionStorage.setItem('govindPortfolioProfile', profile); } catch (_) { /* session storage may be unavailable */ }
@@ -141,7 +155,14 @@ skillTabs.forEach((tab, index) => {
 });
 
 const remembered = getRememberedProfile();
-if (remembered) applyProfile(remembered, false);
+if (remembered) {
+  openingScreen.hidden = true;
+  applyProfile(remembered, false);
+} else if (matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  finishOpening();
+} else {
+  openingTimer = setTimeout(finishOpening, 3300);
+}
 
 const progressBar = document.getElementById('scrollProgress');
 const backToTop = document.getElementById('backToTop');
