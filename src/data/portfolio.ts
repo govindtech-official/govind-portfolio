@@ -6,6 +6,8 @@
 
 export type Palette = { from: string; via: string; to: string; accent: string };
 
+export const publicAsset = (path: string) => `${import.meta.env.BASE_URL}${path.replace(/^\/+/, '')}`;
+
 export const profile = {
   fullName: 'Govind Raj',
   displayName: 'Govind Raj',
@@ -23,11 +25,11 @@ export const profile = {
     linkedin: 'https://www.linkedin.com/in/govind-raj2607/',
     github: 'https://github.com/govindtech-official',
   },
-  resumePdf: '/assets/Govind_Raj_Resume.pdf',
+  resumePdf: publicAsset('assets/Govind_Raj_Resume.pdf'),
   resumeAvailable: false,
   portrait: {
-    src: '/assets/portrait-720.webp',
-    srcSet: '/assets/portrait-420.webp 420w, /assets/portrait-720.webp 720w, /assets/portrait-1100.webp 1100w',
+    src: publicAsset('assets/portrait-720.webp'),
+    srcSet: `${publicAsset('assets/portrait-420.webp')} 420w, ${publicAsset('assets/portrait-720.webp')} 720w, ${publicAsset('assets/portrait-1100.webp')} 1100w`,
     alt: 'Portrait of Govind Raj',
   },
   interests: ['Artificial Intelligence', 'Machine Learning', 'Full-Stack Development', 'Cloud Computing', 'System Design', 'Data Structures and Algorithms', 'Entrepreneurship'],
