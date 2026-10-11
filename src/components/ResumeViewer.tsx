@@ -1,6 +1,7 @@
+
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { achievements, certifications, education, experience, profile, projects, skillCategories } from '../data/portfolio';
+import { achievements, certifications, coursework, education, experience, profile, projects, skillCategories } from '../data/portfolio';
 import { EASE, Magnetic, SectionHeading } from './fx';
 
 /** A designed portfolio profile with view and optional résumé download actions. */
@@ -97,6 +98,7 @@ export function ResumeSheet() {
           <h3 className="mt-1 font-display text-[clamp(1.9rem,4.4vw,3.2rem)] leading-[0.9] tracking-wide text-bone">{profile.fullName}</h3>
         </div>
         <div className="text-xs leading-relaxed text-mist sm:text-right">
+          {profile.phone && <a href={`tel:${profile.phone.replace(/\s/g, '')}`} className="block hover:text-bone">{profile.phone}</a>}
           {profile.email ? <a href={`mailto:${profile.email}`} className="block hover:text-bone">{profile.email}</a> : <span className="block text-smoke">Email: add professional address</span>}
           <a href={profile.links.linkedin} target="_blank" rel="noreferrer" className="hover:text-bone">
             LinkedIn ↗
@@ -124,6 +126,7 @@ export function ResumeSheet() {
               </p>
             </div>
           ))}
+          <p className="mb-4 text-xs leading-relaxed text-mist"><span className="font-semibold text-bone">Coursework: </span>{coursework.join(' · ')}</p>
 
           <H>Work Experience</H>
           {experience.map((x) => (
@@ -191,3 +194,4 @@ export function ResumeSheet() {
     </article>
   );
 }
+
