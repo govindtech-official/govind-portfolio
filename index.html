@@ -1,191 +1,24 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#09090d">
-  <meta name="description" content="Govind Raj — B.Tech CSE (AI & ML) student at KIIT. Explore his education, credentials, interests, and projects.">
-  <meta property="og:title" content="Govind Raj — The next chapter">
-  <meta property="og:description" content="A cinematic portfolio by Govind Raj, CSE (AI & ML) student at KIIT.">
-  <meta property="og:type" content="website">
-  <meta name="author" content="Govind Raj">
-  <title>Govind Raj — The next chapter</title>
-  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="portfolio-enhancements.css">
-  <script src="app.js" defer></script>
-</head>
-<body>
-  <a class="skip-link" href="#main">Skip to content</a>
-  <div class="noise" aria-hidden="true"></div>
-  <div class="scroll-progress" aria-hidden="true"><span id="scrollProgress"></span></div>
-
-  <main id="main">
-    <section class="opening-screen" id="openingScreen" aria-label="Portfolio opening sequence">
-      <div class="opening-backdrop" aria-hidden="true"><img src="assets/govind-portrait.png" alt=""><span></span></div>
-      <div class="opening-copy">
-        <p class="eyebrow"><span class="live-dot"></span> AN ORIGINAL SERIES</p>
-        <p class="opening-studio">A STORY IN PROGRESS</p>
-        <h1>GOVIND<br><span>RAJ</span></h1>
-        <p class="opening-role">CSE (AI &amp; ML) STUDENT <i>·</i> KIIT</p>
-        <div class="opening-rule"><span></span></div>
-        <p class="opening-caption">THE NEXT CHAPTER STARTS HERE</p>
-      </div>
-      <button class="opening-skip" id="skipOpening" type="button">SKIP INTRO <span aria-hidden="true">↗</span></button>
-      <span class="opening-index">G / 01</span>
-    </section>
-
-    <section class="profile-screen" id="profileScreen" aria-labelledby="profileTitle">
-      <div class="screen-orbit orbit-one" aria-hidden="true"></div><div class="screen-orbit orbit-two" aria-hidden="true"></div>
-      <div class="profile-content">
-        <p class="eyebrow"><span class="live-dot"></span> AN ORIGINAL PORTFOLIO</p>
-        <h1 id="profileTitle">Who's watching?</h1>
-        <p class="screen-intro">Pick a lens. The story is still mine.</p>
-        <div class="profile-grid" role="list" aria-label="Choose a portfolio profile">
-          <button class="profile-card" data-profile="personal" role="listitem" aria-label="Personal profile: about and the full portfolio">
-            <span class="profile-art portrait-art"><img src="assets/govind-portrait.png" alt="" fetchpriority="high"><span class="art-glint"></span></span>
-            <span class="profile-name">Govind</span><span class="profile-note">The full story</span>
-          </button>
-          <button class="profile-card" data-profile="recruiter" role="listitem" aria-label="Recruiter profile: education and credentials">
-            <span class="profile-art recruiter-art"><span class="profile-letter">G</span><span class="art-index">01 / PROFILE</span></span>
-            <span class="profile-name">Recruiter</span><span class="profile-note">Education · credentials</span>
-          </button>
-          <button class="profile-card" data-profile="developer" role="listitem" aria-label="Developer profile: projects and learning interests">
-            <span class="profile-art developer-art"><span class="code-mark">&lt;/&gt;</span><span class="art-index">02 / BUILD</span></span>
-            <span class="profile-name">Developer</span><span class="profile-note">Projects · learning</span>
-          </button>
-          <button class="profile-card" data-profile="creative" role="listitem" aria-label="Creative profile: experiments and visual work">
-            <span class="profile-art creative-art"><span class="spark-mark">✳</span><span class="art-index">03 / EXPLORE</span></span>
-            <span class="profile-name">Creative</span><span class="profile-note">Experiments · ideas</span>
-          </button>
-        </div>
-        <p class="profile-footnote">Every profile opens a different chapter. The complete portfolio stays one click away.</p>
-      </div>
-      <span class="screen-index">G / 01</span>
-    </section>
-
-    <div class="site" id="site" hidden>
-      <header class="topbar">
-        <a class="brand" href="#home" aria-label="Govind Raj, home"><span class="brand-mark">G</span><span>GOVIND<span class="brand-period">.</span></span></a>
-        <nav class="main-nav" aria-label="Main navigation">
-          <a href="#about" data-nav="personal">About</a><a href="#education" data-nav="recruiter">Education</a>
-          <a href="#projects" data-nav="developer">Projects</a><a href="#universe" data-nav="developer">Skill universe</a>
-          <a href="#credentials" data-nav="recruiter">Credentials</a><a href="#creative" data-nav="creative">Creative</a>
-        </nav>
-        <div class="header-actions">
-          <span class="profile-label" id="profileLabel">PERSONAL MODE</span>
-          <button class="switch-profile" id="switchProfile" aria-haspopup="dialog"><span class="switch-dot"></span> Profiles <span aria-hidden="true">⌄</span></button>
-        </div>
-      </header>
-
-      <section class="hero" id="home" aria-labelledby="heroTitle">
-        <div class="hero-backdrop" aria-hidden="true"><div class="hero-light"></div><div class="hero-lines"></div></div>
-        <div class="hero-copy">
-          <p class="eyebrow"><span class="live-dot"></span> THE NEXT CHAPTER STARTS HERE</p>
-          <p class="series-label">A STORY IN PROGRESS <span>•</span> BHUBANESWAR, INDIA</p>
-          <h1 id="heroTitle">GOVIND<br><span>RAJ</span></h1>
-          <p class="hero-role">CSE (AI &amp; ML) STUDENT <i></i> KIIT</p>
-          <p class="hero-description">Curious about how intelligent systems and thoughtful software can make a difference. Currently learning, building, and finding the next question worth exploring.</p>
-          <div class="hero-actions">
-            <button class="button button-primary" id="playIntro"><span class="play-icon" aria-hidden="true">▶</span> Play intro</button>
-            <a class="button button-quiet" href="#projects"><span aria-hidden="true">＋</span> Explore projects</a>
-            <a class="button button-outline" href="mailto:contactgovindtech@gmail.com">Contact <span aria-hidden="true">↗</span></a>
-            <a class="button button-outline" href="https://github.com/govindtech-official" target="_blank" rel="noreferrer">GitHub <span aria-hidden="true">↗</span></a>
-          </div>
-          <div class="hero-meta"><span><b>03</b> YEARS INTO THE JOURNEY</span><span class="meta-divider"></span><span><b>08.3</b> CGPA</span><span class="meta-divider"></span><span>KIIT <b>·</b> 5TH SEM</span></div>
-        </div>
-        <div class="hero-portrait-wrap"><div class="portrait-frame"><img class="hero-portrait" src="assets/govind-portrait.png" alt="Portrait of Govind Raj" fetchpriority="high"><div class="portrait-shade"></div><span class="portrait-caption">GOVIND RAJ <i>—</i> CHAPTER 01</span></div><div class="portrait-glow"></div></div>
-        <div class="hero-bottom"><span>SCROLL TO EXPLORE</span><span class="scroll-line"></span><span>01 — 06</span></div>
-      </section>
-
-      <section class="continue-section" aria-labelledby="continueTitle">
-        <div class="section-heading"><p class="eyebrow">PICK UP WHERE YOU LEFT OFF</p><span class="section-side-note">CONTINUE EXPLORING</span></div>
-        <div class="continue-heading"><h2 id="continueTitle">Your next <span>episode.</span></h2><p>Choose a chapter. The whole story stays open.</p></div>
-        <div class="continue-rail">
-          <a class="continue-card continue-about" href="#about"><span class="continue-number">01 / THE PERSON</span><span class="continue-play" aria-hidden="true">▶</span><span class="continue-title">A work in<br>progress.</span><span class="continue-meta">ABOUT <i>·</i> 2 MIN</span></a>
-          <a class="continue-card continue-education" href="#education"><span class="continue-number">02 / THE FOUNDATION</span><span class="continue-play" aria-hidden="true">▶</span><span class="continue-title">The learning<br>chapter.</span><span class="continue-meta">EDUCATION <i>·</i> 3 MIN</span></a>
-          <a class="continue-card continue-projects" href="#projects"><span class="continue-number">03 / THE BUILDS</span><span class="continue-play" aria-hidden="true">▶</span><span class="continue-title">Made with<br>curiosity.</span><span class="continue-meta">PROJECTS <i>·</i> 4 MIN</span></a>
-        </div>
-      </section>
-
-      <section class="content-section about-section" id="about" aria-labelledby="aboutTitle">
-        <div class="section-heading"><p class="eyebrow">01 <span>—</span> THE PERSON BEHIND THE SCREEN</p><span class="section-side-note">PROFILE / 001</span></div>
-        <div class="about-layout">
-          <div class="about-title-block"><h2 id="aboutTitle">A curious mind.<br><span>A work in progress.</span></h2><p class="section-lede">I’m Govind, a third-year CSE (AI &amp; ML) student at KIIT. My path is still unfolding; I’m here to learn deeply, make useful things, and share what I discover along the way.</p><a class="text-link" href="https://www.linkedin.com/in/govind-raj2607/" target="_blank" rel="noreferrer">More about me on LinkedIn <span>↗</span></a></div>
-          <div class="about-facts">
-            <article class="fact-card"><span class="fact-number">01</span><div><span class="fact-label">CURRENT CHAPTER</span><h3>Learning by making</h3><p>Exploring artificial intelligence, machine learning, and software development as an undergraduate student.</p></div><span class="fact-mark">✳</span></article>
-            <article class="fact-card"><span class="fact-number">02</span><div><span class="fact-label">HOME BASE</span><h3>Bhubaneswar, India</h3><p>Studying at Kalinga Institute of Industrial Technology.</p></div><span class="fact-mark">⌖</span></article>
-            <article class="fact-card"><span class="fact-number">03</span><div><span class="fact-label">ALWAYS OPEN</span><h3>New perspectives</h3><p>For ideas, collaboration, and conversations about technology and learning.</p></div><span class="fact-mark">↗</span></article>
-          </div>
-        </div>
-      </section>
-
-      <section class="content-section education-section" id="education" aria-labelledby="educationTitle">
-        <div class="section-heading"><p class="eyebrow">02 <span>—</span> THE FOUNDATION</p><span class="section-side-note">EDUCATION / 002</span></div>
-        <div class="section-title-row"><h2 id="educationTitle">In the <span>making.</span></h2><p>Every chapter adds a new way to think.</p></div>
-        <div class="education-grid">
-          <article class="education-card education-primary"><span class="card-kicker">CURRENTLY STUDYING <span>●</span></span><div class="edu-monogram">K<span>I</span>IT</div><div class="edu-content"><p class="edu-type">BACHELOR OF TECHNOLOGY</p><h3>Computer Science &amp; Engineering</h3><p class="edu-specialty">Artificial Intelligence &amp; Machine Learning</p><div class="edu-divider"></div><div class="edu-meta"><span>Kalinga Institute of Industrial Technology</span><span>Bhubaneswar, India</span></div><div class="edu-stats"><div><b>03</b><small>YEAR</small></div><div><b>05</b><small>SEMESTER</small></div><div><b>8.3</b><small>CGPA</small></div></div></div></article>
-          <article class="education-card education-secondary"><span class="card-kicker">FOUNDATION CERTIFICATE <span>2025</span></span><div class="iit-seal">IIT<br><b>PATNA</b></div><div class="edu-content"><p class="edu-type">INDIAN INSTITUTE OF TECHNOLOGY PATNA</p><h3>Computer Science &amp; Data Analytics</h3><p class="edu-specialty">Foundation level credit requirements completed</p><div class="edu-divider"></div><div class="edu-meta"><span>Foundation Certificate</span><span>Issued September 10, 2025</span></div><a class="text-link small-link" href="https://cet.iitp.ac.in/moodle/mod/customcert/verify_certificate.php" target="_blank" rel="noreferrer">Certificate verification <span>↗</span></a></div></article>
-        </div>
-      </section>
-
-      <section class="content-section projects-section" id="projects" aria-labelledby="projectsTitle">
-        <div class="section-heading"><p class="eyebrow">03 <span>—</span> IDEAS BECOMING REAL</p><span class="section-side-note">ORIGINALS / 003</span></div>
-        <div class="section-title-row"><div><h2 id="projectsTitle">Built with <span>curiosity.</span></h2><p class="section-lede">A few projects from my learning journey. Open a card to explore its repository.</p></div><a class="text-link" href="https://github.com/govindtech-official" target="_blank" rel="noreferrer">Browse my GitHub <span>↗</span></a></div>
-        <div class="project-rail">
-          <article class="project-card project-sports"><div class="project-art" aria-hidden="true"><span class="project-art-index">01 / ORIGINAL</span><span class="project-art-mark">SW</span><span class="project-art-caption">SPORTS<br>WORLD</span></div><div class="project-info"><p class="project-genre">WEB APPLICATION <span>·</span> NODE.JS</p><h3>Sports World</h3><p>A sports store for products, carts, orders, inventory, and custom jersey designs, backed by SQLite.</p><div class="project-footer"><span>NODE.JS&nbsp; / &nbsp;SQLITE</span><a href="https://github.com/govindtech-official/Sports-World" target="_blank" rel="noreferrer" aria-label="Open the Sports World repository">VIEW REPOSITORY ↗</a></div></div></article>
-          <article class="project-card project-traffic"><div class="project-art" aria-hidden="true"><span class="project-art-index">02 / EXPERIMENT</span><span class="traffic-light"><i></i><i></i><i></i></span><span class="project-art-caption">SIGNAL<br>STUDY</span></div><div class="project-info"><p class="project-genre">OPENENV <span>·</span> SIMULATION</p><h3>Traffic Signal OpenEnv</h3><p>A small Python environment exploring traffic-signal timing with a congestion-focused reward.</p><div class="project-footer"><span>PYTHON&nbsp; / &nbsp;OPENENV</span><a href="https://github.com/govindtech-official/traffic-ai-env" target="_blank" rel="noreferrer" aria-label="Open the Traffic Signal OpenEnv repository">VIEW REPOSITORY ↗</a></div></div></article>
-          <article class="project-card project-billing"><div class="project-art" aria-hidden="true"><span class="project-art-index">03 / STUDY</span><span class="billing-symbol">₹</span><span class="project-art-caption">BILLING<br>SYSTEM</span></div><div class="project-info"><p class="project-genre">DESKTOP APP <span>·</span> JAVA</p><h3>Electricity Billing System</h3><p>A Java Swing application for customer accounts, bill calculation, payments, and bill generation.</p><div class="project-footer"><span>JAVA&nbsp; / &nbsp;JDBC&nbsp; / &nbsp;MYSQL</span><a href="https://github.com/govindtech-official/Electricity_Billing_System" target="_blank" rel="noreferrer" aria-label="Open the Electricity Billing System repository">VIEW REPOSITORY ↗</a></div></div></article>
-        </div>
-      </section>
-
-      <section class="content-section universe-section" id="universe" aria-labelledby="universeTitle">
-        <div class="section-heading"><p class="eyebrow">04 <span>—</span> WHAT I'M EXPLORING</p><span class="section-side-note">LEARNING / 004</span></div>
-        <div class="section-title-row"><div><h2 id="universeTitle">My skill <span>universe.</span></h2><p>Areas I’m drawn to. I’m still learning, so no made-up scores or rankings.</p></div><span class="universe-orbit" aria-hidden="true">✳</span></div>
-        <div class="universe-layout"><div class="universe-tabs" role="tablist" aria-label="Technical areas"><button class="universe-tab active" id="tab-languages" role="tab" aria-selected="true" aria-controls="skillPanel" data-skill="languages">Languages <span>01</span></button><button class="universe-tab" id="tab-web" role="tab" aria-selected="false" aria-controls="skillPanel" data-skill="web">Web development <span>02</span></button><button class="universe-tab" id="tab-cs" role="tab" aria-selected="false" aria-controls="skillPanel" data-skill="cs">AI, ML &amp; DSA <span>03</span></button></div><div class="universe-panel" id="skillPanel" role="tabpanel" aria-labelledby="tab-languages" tabindex="0"><span class="panel-orbit" aria-hidden="true">01</span><p class="fact-label" id="skillLabel">LANGUAGES LISTED ON PROFILE</p><h3 id="skillTitle">Programming languages</h3><p id="skillDescription">Languages listed on my public profile. I have not assigned proficiency scores.</p><div class="skill-tags" id="skillTags"><span>Java</span><span>Python</span><span>C</span><span>Go</span></div></div></div>
-      </section>
-
-      <section class="content-section credential-section" id="credentials" aria-labelledby="credentialTitle">
-        <div class="section-heading"><p class="eyebrow">05 <span>—</span> MILESTONES SO FAR</p><span class="section-side-note">CREDENTIALS / 005</span></div>
-        <div class="section-title-row"><div><h2 id="credentialTitle">Proof of <span>practice.</span></h2><p>Courses, workshops, and simulations that added something to the journey.</p></div><span class="credential-count"><b>04</b> CREDENTIALS</span></div>
-        <div class="credential-grid">
-          <details class="credential-card oracle-card"><summary><span class="credential-top"><span class="credential-brand">ORACLE <i>UNIVERSITY</i></span><span class="credential-date">NOV 2025</span></span><span class="credential-name">OCI 2025 Certified AI Foundations Associate</span><span class="credential-kind">CERTIFICATION <b>↗</b></span></summary><div class="credential-detail"><p>Oracle Cloud Infrastructure 2025 Certified AI Foundations Associate. Issued November 5, 2025.</p><span class="credential-status">CERTIFICATE SHARED</span></div></details>
-          <details class="credential-card iit-card"><summary><span class="credential-top"><span class="credential-brand">IIT <i>PATNA</i></span><span class="credential-date">SEP 2025</span></span><span class="credential-name">Foundation Certificate — Computer Science &amp; Data Analytics</span><span class="credential-kind">FOUNDATION CERTIFICATE <b>↗</b></span></summary><div class="credential-detail"><p>Completed foundation level credit requirements in Computer Science and Data Analytics. Issued September 10, 2025.</p><a href="https://cet.iitp.ac.in/moodle/mod/customcert/verify_certificate.php" target="_blank" rel="noreferrer">Open verification page ↗</a></div></details>
-          <details class="credential-card deloitte-card"><summary><span class="credential-top"><span class="credential-brand">Deloitte<span class="deloitte-dot">.</span></span><span class="credential-date">NOV 2025</span></span><span class="credential-name">Technology Job Simulation</span><span class="credential-kind">SIMULATION <b>↗</b></span></summary><div class="credential-detail"><p>Certificate of Completion. Completed November 28, 2025; practical tasks in coding and development.</p><span class="credential-status">CERTIFICATE SHARED</span></div></details>
-          <details class="credential-card guvi-card"><summary><span class="credential-top"><span class="credential-brand">GUVI <i>× HCL</i></span><span class="credential-date">MAR 2026</span></span><span class="credential-name">Become a 360° Web Developer workshop</span><span class="credential-kind">PARTICIPATION <b>↗</b></span></summary><div class="credential-detail"><p>Certificate of participation in GUVI’s workshop, held March 27, 2026.</p><span class="credential-status">CERTIFICATE SHARED</span></div></details>
-        </div>
-      </section>
-
-      <section class="creative-section" id="creative" aria-labelledby="creativeTitle"><div class="creative-geometry" aria-hidden="true"><span></span><span></span><span></span></div><div class="creative-copy"><p class="eyebrow">06 <span>—</span> ROOM FOR WHAT'S NEXT</p><h2 id="creativeTitle">To be<br><span>continued.</span></h2><p>Every good story leaves room for another idea.</p><a class="button button-primary" href="mailto:contactgovindtech@gmail.com">Let’s connect <span aria-hidden="true">↗</span></a><div class="social-links"><a href="https://www.linkedin.com/in/govind-raj2607/" target="_blank" rel="noreferrer">LINKEDIN ↗</a><a href="https://github.com/govindtech-official" target="_blank" rel="noreferrer">GITHUB ↗</a><a href="mailto:contactgovindtech@gmail.com">EMAIL ↗</a></div></div><span class="end-stamp">END OF THIS CHAPTER / 2026</span></section>
-
-      <footer class="footer"><a class="footer-brand" href="#home">G<span>.</span></a><p>Made with curiosity by Govind Raj</p><a href="#home">BACK TO THE BEGINNING ↑</a><span>THE STORY CONTINUES</span></footer>
-    </div>
-  </main>
-
-  <dialog class="profile-dialog" id="profileDialog" aria-labelledby="dialogTitle"><div class="dialog-head"><div><p class="eyebrow">CHANGE YOUR VIEW</p><h2 id="dialogTitle">Choose a profile</h2></div><button class="dialog-close" id="closeDialog" aria-label="Close profiles">×</button></div><div class="dialog-profiles"><button data-profile="personal"><span class="mini-profile mini-personal">G</span><span>Personal<small>The full story</small></span></button><button data-profile="recruiter"><span class="mini-profile mini-recruiter">R</span><span>Recruiter<small>Education &amp; credentials</small></span></button><button data-profile="developer"><span class="mini-profile mini-developer">&lt;/&gt;</span><span>Developer<small>Projects &amp; learning</small></span></button><button data-profile="creative"><span class="mini-profile mini-creative">✳</span><span>Creative<small>Experiments &amp; ideas</small></span></button></div></dialog>
-
-  <dialog class="intro-dialog" id="introDialog" aria-labelledby="introTitle"><button class="intro-skip" id="skipIntro">SKIP INTRO <span>↗</span></button><div class="intro-frame"><p class="eyebrow">AN ORIGINAL SERIES</p><h2 id="introTitle">GOVIND<br><span>RAJ</span></h2><p>CSE (AI &amp; ML) STUDENT <i>·</i> KIIT</p><div class="intro-rule"><span></span></div><p class="intro-caption">THE NEXT CHAPTER STARTS HERE</p></div></dialog>
-  <div class="toast" id="toast" role="status" aria-live="polite"></div>
-  <a class="back-to-top" href="#home" id="backToTop" aria-label="Back to top">↑</a>
-  <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Govind Raj",
-      "email": "contactgovindtech@gmail.com",
-      "alumniOf": {
-        "@type": "CollegeOrUniversity",
-        "name": "Kalinga Institute of Industrial Technology"
-      },
-      "sameAs": [
-        "https://github.com/govindtech-official",
-        "https://www.linkedin.com/in/govind-raj2607/"
-      ],
-      "knowsAbout": ["Artificial intelligence", "Machine learning", "MERN stack", "Java", "Python", "C", "Go"]
-    }
-  </script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>Govind Raj | Full-Stack Developer &amp; AI/ML Enthusiast</title>
+    <meta name="description" content="Govind Raj — Full-Stack Developer and AI & ML Enthusiast, Computer Science student at KIIT University." />
+    <meta name="theme-color" content="#07070a" />
+    <meta property="og:title" content="Govind Raj | Full-Stack Developer &amp; AI/ML Enthusiast" />
+    <meta property="og:description" content="Full-Stack Developer • AI / ML Enthusiast • KIIT University." />
+    <meta property="og:image" content="/assets/portrait-1100.webp" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="preload" as="image" href="/assets/portrait-720.webp" type="image/webp" />
+  </head>
+  <body>
+    <div id="root"></div>
+    <noscript>Govind Raj — Full-Stack Developer and AI &amp; ML Enthusiast. Please enable JavaScript to view the portfolio.</noscript>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
 </html>
